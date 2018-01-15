@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>rope-read</title>
+  </head>
+  <body>
+    <div>Input</div>
+    <div>
+    <textarea id="inputtext" type="text">
+    </textarea>
+    </div>
+    <button id="action">action
+    </button>
+  </body>
+  <style>
+    textarea {
+    background-color: yellow;
+    }
+    #output {
+    color: blue;
+    }
+  </style>
+  <script>
+
+    (function () {
+
+    var output = function () {
+
+    var element = document.getElementById("output")
+    if (element) {
+    element.textContent = ""
+    }
+
+    else {
+    element = document.createElement("div")
+    element.id = "output"
+    }
+    element.textContent = document.getElementById("inputtext").value
+    const node = document.getElementById("action")
+    node.parentNode.insertBefore(element, node.nextSibling)
+    }
+
+    document.getElementById("action").onclick = output
+
+    })()
+
+
+  </script>
+</html>
