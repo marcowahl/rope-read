@@ -1,1 +1,110 @@
-../index.html
+<!DOCTYPE html>
+
+<!-- Copyright (C) 2018 Marco Wahl github.com/marcowahl -->
+
+<!-- This program is free software: you can redistribute it and/or modify -->
+<!-- it under the terms of the GNU General Public License as published by -->
+<!-- the Free Software Foundation, either version 3 of the License, or -->
+<!-- (at your option) any later version. -->
+
+<!-- This program is distributed in the hope that it will be useful, -->
+<!-- but WITHOUT ANY WARRANTY; without even the implied warranty of -->
+<!-- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the -->
+<!-- GNU General Public License for more details. -->
+
+<!-- You should have received a copy of the GNU General Public License -->
+<!-- along with this program.  If not, see <http://www.gnu.org/licenses/>. -->
+
+<html lang="en">
+  <head>
+    <title>rope read</title>
+  </head>
+  <body>
+    <div id="rope-read-input">
+      <div id="menu">Paste text in the yellow area or click <button
+      id="action-button">Rope Read</button>.  Expect the text to
+      appear ready for you to <b>rope read</b>.  Reload to get back to
+      this page.</div>
+      <div id="input-area">
+        <textarea id="input" type="text"></textarea>
+      </div>
+    </div>
+    <div id="output" class="rope-read-section" data-lining></div>
+  </body>
+  <style type="text/css">
+
+    .rope-read-section .line:nth-of-type(2n) {
+    -moz-transform:rotate(180deg);
+    }
+
+    body {
+    margin:0;
+    padding:0;
+    }
+
+    body, html {
+    height:100%;
+    }
+
+    #rope-read-input, #input {
+    width: 100%;
+    height: 100%;
+    }
+
+    #input-area {
+    width: 100%;
+    height: 100%;
+    }
+
+    #menu {
+    width: 100%;
+    }
+
+    #input {
+    background-color: yellow;
+    }
+
+    .convenience-button {
+    width: 50px;
+    height: 50px;
+    font-size: 8px;
+    }
+
+    #menu {
+    padding: 1em;
+    background-color: beige;
+    font-size: 0.4em;
+    }
+
+    #action-button {
+    font-size: 0.6em;
+    }
+
+  </style>
+  <script src="lining.min.js"></script>
+  <script>
+    (function () {
+    var slurpText = () => {
+
+    document.getElementById("rope-read-input").style.display = "none"
+    var output_element = document.getElementById("output")
+    output_element.textContent = document.getElementById("input").value
+    lining(output_element)
+    }
+
+    var insertExampleText = () => {
+    document.getElementById("input").value =( "One morning, as Gregor Samsa was waking up from anxious dreams, he discovered that in bed he had been changed into a monstrous verminous bug. He lay on his armour-hard back and saw, as he lifted his head up a little, his brown, arched abdomen divided up into rigid bow-like sections. From this height the blanket, just about ready to slide off completely, could hardly stay in place. His numerous legs, pitifully thin in comparison to the rest of his circumference, flickered helplessly before his eyes." +
+"\n\n'What's happened to me,' he thought. It was no dream. His room, a proper room for a human being, only somewhat too small, lay quietly between the four well-known walls. Above the table, on which an unpacked collection of sample cloth goods was spread out (Samsa was a traveling salesman) hung the picture which he had cut out of an illustrated magazine a little while ago and set in a pretty gilt frame. It was a picture of a woman with a fur hat and a fur boa. She sat erect there, lifting up in the direction of the viewer a solid fur muff into which her entire forearm disappeared."
+    )
+    }
+
+    var clearText = () => { document.getElementById("input").value = "" }
+
+    document.getElementById("input").oninput = slurpText
+    document.getElementById("action-button").onclick = slurpText
+    document.getElementById("insert-example-text").onclick = insertExampleText
+    document.getElementById("clear-text").onclick = clearText
+
+    })()
+  </script>
+</html>
