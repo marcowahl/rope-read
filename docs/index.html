@@ -21,11 +21,11 @@
   </head>
   <body>
     <div id="rope-read-input">
-      <div id="menu">Paste or drop text into the (possibly yellow)
-      area below.  Or click <button id="action-button">Rope
-      Read</button>.  Rope read transforms and displays the text for
-      you to <b>rope read</b>.  Reload the page for a new start.  (<a
-      href="https://github.com/marcowahl/rope-read">Source code</a>)
+      <div id="menu">
+        Paste or drop text into the (possibly yellow) area below.
+        Rope read transforms and displays the text for you to <b>rope
+        read</b>.  Reload the page for a new start. (<a
+        href="https://github.com/marcowahl/rope-read">Source code</a>)
       </div>
       <div id="input-area">
         <textarea id="input" type="text"></textarea>
@@ -58,54 +58,33 @@
     height: 100%;
     }
 
-    #menu {
-    width: 100%;
-    }
-
     #input {
     background-color: yellow;
     }
 
-    .convenience-button {
-    width: 50px;
-    height: 50px;
-    font-size: 8px;
-    }
-
     #menu {
+    width: 100%;
     padding: 1em;
     background-color: beige;
-    }
-
-    #action-button {
-    font-size: 0.6em;
     }
 
   </style>
   <script src="lining.min.js"></script>
   <script>
     (function () {
-    var slurpText = () => {
 
+    document.getElementById("input").value = "" // clean start.
+
+    var slurpText = () => {
     document.getElementById("rope-read-input").style.display = "none"
+
     var output_element = document.getElementById("output")
     output_element.textContent = document.getElementById("input").value
     lining(output_element)
     }
 
-    var insertExampleText = () => {
-    document.getElementById("input").value =( "One morning, as Gregor Samsa was waking up from anxious dreams, he discovered that in bed he had been changed into a monstrous verminous bug. He lay on his armour-hard back and saw, as he lifted his head up a little, his brown, arched abdomen divided up into rigid bow-like sections. From this height the blanket, just about ready to slide off completely, could hardly stay in place. His numerous legs, pitifully thin in comparison to the rest of his circumference, flickered helplessly before his eyes." +
-"\n\n'What's happened to me,' he thought. It was no dream. His room, a proper room for a human being, only somewhat too small, lay quietly between the four well-known walls. Above the table, on which an unpacked collection of sample cloth goods was spread out (Samsa was a traveling salesman) hung the picture which he had cut out of an illustrated magazine a little while ago and set in a pretty gilt frame. It was a picture of a woman with a fur hat and a fur boa. She sat erect there, lifting up in the direction of the viewer a solid fur muff into which her entire forearm disappeared."
-    )
-    }
-
-    var clearText = () => { document.getElementById("input").value = "" }
-
     document.getElementById("input").oninput = slurpText
-    document.getElementById("action-button").onclick = slurpText
-    document.getElementById("insert-example-text").onclick = insertExampleText
-    document.getElementById("clear-text").onclick = clearText
-
-    })()
+    }
+    )()
   </script>
 </html>
