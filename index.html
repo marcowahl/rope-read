@@ -79,7 +79,7 @@
     document.getElementById("rope-read-input").style.display = "none"
 
     var output_element = document.getElementById("output")
-    output_element.textContent = document.getElementById("input").value
+    output_element.textContent = document.getElementById("input").value.replace("\n\n", " ______________ ")
     lining(output_element)
     }
 
