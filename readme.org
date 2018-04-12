@@ -3,7 +3,8 @@
 
 rope read saves eye movements.
 
-This is a website realizing a way to rope read.
+This is a website realizing a way to rope read.  See
+https://marcowahl.github.io/rope-read/ .
 
 - Paste or drop some text into the website.
 - See the text in rope read form.
