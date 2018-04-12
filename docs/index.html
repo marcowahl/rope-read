@@ -19,17 +19,13 @@
   <head>
     <title>rope read</title>
   </head>
-  <body>
-    <div id="rope-read-input">
-      <div id="menu">
-        Paste or drop text into the (possibly yellow) area below.
-        Rope read transforms and displays the text for you to <b>rope
-        read</b>.  Reload the page for a new start. (<a
-        href="https://github.com/marcowahl/rope-read">Source code</a>)
-      </div>
-      <div id="input-area">
-        <textarea id="input" type="text"></textarea>
-      </div>
+  <body ondrop="drop_handler(event)" ondragover="dragover_handler(event)" >
+    <div id="drop-zone" >
+      Drag and drop text below and start rope read!  Or paste text here:
+      <textarea id="input"></textarea>
+    </div>
+    <div id="link-to-dig">
+    See details at <a href="https://github.com/marcowahl/rope-read">github.com/marcowahl/rope-read</a>
     </div>
     <div id="output" class="rope-read-section" data-lining></div>
   </body>
@@ -48,7 +44,7 @@
     height:100%;
     }
 
-    #rope-read-input, #input {
+    #rope-read-input {
     width: 100%;
     height: 100%;
     }
@@ -60,6 +56,7 @@
 
     #input {
     background-color: yellow;
+    width:10%;
     }
 
     #menu {
@@ -68,24 +65,41 @@
     background-color: beige;
     }
 
+    #drop-zone {
+        background-color: cyan;
+    }
+
+    #link-to-dig {
+    background-color: orange;
+    }
+
   </style>
   <script src="lining.min.js"></script>
   <script>
     (function () {
+        var slurpText = () => {
+            var output_element = document.getElementById("output")
+            output_element.textContent = document.getElementById(
+              "input").value.replace(new RegExp("\n\n", 'g'), " ______________ ")
+            lining(output_element)
+        }
+        document.getElementById("input").value = "" // clean start.
+        document.getElementById("input").oninput = slurpText
+    })()
 
-    document.getElementById("input").value = "" // clean start.
-
-    var slurpText = () => {
-    document.getElementById("rope-read-input").style.display = "none"
-
-    var output_element = document.getElementById("output")
-    output_element.textContent = document.getElementById(
-      "input").value.replace(new RegExp("\n\n", 'g'), " ______________ ")
-    lining(output_element)
+    function dragover_handler(ev) {
+        ev.preventDefault();
+        // Set the dropEffect to move
+        ev.dataTransfer.dropEffect = "move"
     }
 
-    document.getElementById("input").oninput = slurpText
+    function drop_handler(ev) {
+        ev.preventDefault();
+        var data = ev.dataTransfer.getData("text");
+        var output_element = document.getElementById("output")
+        output_element.textContent = data
+        .replace(new RegExp("\n\n", 'g'), " ______________ ")
+        lining(output_element)
     }
-    )()
   </script>
 </html>
