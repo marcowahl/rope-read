@@ -1,0 +1,6 @@
+
+* publish
+
+folder docs/ gets published as webpage afaiu.
+
+so copy the necessary stuff there.
