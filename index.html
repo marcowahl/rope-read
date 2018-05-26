@@ -20,9 +20,10 @@
     <title>rope read</title>
   </head>
   <body ondrop="drop_handler(event)" ondragover="dragover_handler(event)" >
-    <div id="drop-zone" >
+    <div id="text-about-drop" >
       Drag and drop text below and start rope read!  Or enter/paste here:
       <textarea id="input"></textarea>
+      <input type="button" value="reverse text color" onclick="reverse_text_color()"></input>
     </div>
     <div id="link-to-dig">
     See details at <a href="https://github.com/marcowahl/rope-read">github.com/marcowahl/rope-read</a>
@@ -65,13 +66,14 @@
     background-color: beige;
     }
 
-    #drop-zone {
+    #text-about-drop {
         background-color: cyan;
     }
 
     #link-to-dig {
     background-color: orange;
     }
+
 
   </style>
   <script src="lining.min.js"></script>
@@ -100,6 +102,20 @@
         output_element.textContent = data
         .replace(new RegExp("\n\n", 'g'), " ______________ ")
         lining(output_element)
-    }
+        }
+
+        function reverse_text_color() {
+        var elem = document.getElementById("output")
+        var color = elem.style.color
+        if (color == "white") {
+        elem.style.color = "black"
+        elem.style.backgroundColor = "white"
+        document.body.style.backgroundColor = elem.style.backgroundColor
+        } else {
+        elem.style.color = "white"
+        elem.style.backgroundColor = "black"
+        document.body.style.backgroundColor = elem.style.backgroundColor
+        }
+        }
   </script>
 </html>
