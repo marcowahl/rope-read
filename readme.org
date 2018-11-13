@@ -1,10 +1,35 @@
 
 * rope read
 
-rope read saves eye movements.
+** Motivation
+
+You don't need to move much these days in front of your machine.  Just
+press some keys with your fingers and occasionally you possibly stir
+the mouse.
+
+But when you read there is this humiliating effort to reposition your
+eyeballs to the other end of the line.  How stressfull is that?  How
+depressing?  How 2017?
+
+It's 2018!  To some extend rope read comes for the rescue.  rope read
+saves eye movements.
+
+** Try
 
 This is a website realizing a way to rope read.  See
 https://marcowahl.github.io/rope-read/ .
 
 - Paste or drop some text into the website.
 - See the text in rope read form.
+- Then rope read!
+
+** Security
+
+rope read runs on your browser.  You are in full control.  No data gets
+copied to some other destination.
+
+** Contact
+
+Ideas, feedback and collaboration are typically welcome.
+
+Send mail to marcowahlsoft(a)gmail.com.
