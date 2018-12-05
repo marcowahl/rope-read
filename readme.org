@@ -1,5 +1,5 @@
 
-* rope read
+* Rope Read
 
 ** Motivation
 
@@ -8,11 +8,14 @@ press some keys with your fingers and occasionally you possibly stir
 the mouse.
 
 But when you read there is this humiliating effort to reposition your
-eyeballs to the other end of the line.  How stressfull is that?  How
-depressing?  How 2017?
+eyeballs to the other end of the line.
 
-It's 2018!  To some extend rope read comes for the rescue.  rope read
-saves eye movements.
+- How stressfull is that?
+- Isn't this totally depressing?
+- This sounds so 2017!
+
+But it's 2018 or even beyound!  Rope Read comes for the
+rescue.  Rope Read saves eye movements.
 
 ** Try
 
@@ -25,8 +28,22 @@ https://marcowahl.github.io/rope-read/ .
 
 ** Security
 
-rope read runs on your browser.  You are in full control.  No data gets
+Rope Read runs on your browser.  You are in full control.  No data gets
 copied to some other destination.
+
+Okay, this holds as far as I can see.  Of course I can't guarantee
+anything.  (This is also stated in the license.)  Note that the
+
+** Free Software
+
+Rope Read is free software.  This includes that you can study this
+software and build something on top of it.  (If you do so please drop
+me a note!  I'm curious.)
+
+** Links
+
+- Emacs users can try rope-read-mode available via MELPA
+  https://melpa.org/#/rope-read-mode.
 
 ** Contact
 
