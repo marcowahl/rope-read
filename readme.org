@@ -1,4 +1,5 @@
 
+
 * Rope Read
 
 ** Motivation
@@ -14,8 +15,8 @@ eyeballs to the other end of the line.
 - Isn't this totally depressing?
 - This sounds so 2017!
 
-But it's 2018 or even beyound!  Rope Read comes for the
-rescue.  Rope Read saves eye movements.
+But it's 2018 or even beyond!  Rope Read comes for the rescue.  Rope
+Read saves eye movements.
 
 ** Try
 
