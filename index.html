@@ -71,10 +71,9 @@ The purpose of this page is to support the Rope Read reading style.  Browsers co
     /*     background-color: cyan; */
     /* } */
 
-    /* #link-to-dig { */
-    /*     background-color: orange; */
-    /*     font-size: 0.5em; */
-    /* } */
+    #link-to-dig {
+        font-size: 0.2em;
+    }
 
   </style>
   <script src="lining.min.js"></script>
@@ -112,10 +111,12 @@ The purpose of this page is to support the Rope Read reading style.  Browsers co
             elem.style.color = "black"
             elem.style.backgroundColor = "white"
             document.body.style.backgroundColor = elem.style.backgroundColor
+            document.body.style.color = elem.style.color
         } else {
             elem.style.color = "white"
             elem.style.backgroundColor = "black"
             document.body.style.backgroundColor = elem.style.backgroundColor
+            document.body.style.color = elem.style.color
         }
     }
   </script>
