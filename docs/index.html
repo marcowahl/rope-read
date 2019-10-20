@@ -20,13 +20,14 @@
     <title>rope read</title>
   </head>
   <body ondrop="drop_handler(event)" ondragover="dragover_handler(event)" >
-    <div id="text-about-drop" >
-      Drag and drop text below or paste here:
-      <textarea id="input"></textarea>
-      <input type="button" value="day/night" onclick="reverse_text_color()"></input>
-    </div>
     <div id="link-to-dig">
 The purpose of this page is to support the Rope Read reading style.  Browsers confirmed to transform text to rope read: <a href="http://firefox.com">firefox</a>, <a href="http://conkeror.org/">conkeror</a>, chrome.  This is <a href="https://en.wikipedia.org/wiki/Free_software">free software</a>.  Find details and all the code at <a href="https://github.com/marcowahl/rope-read">github.com/marcowahl/rope-read</a>.  And btw this is not a cloud thing here.  Your browser does all the work.  No data of users gets stored by the maintainer/developer of this page.  Have fun!
+    </div>
+    <div id="text-about-drop" >
+      Paste or write here:
+      <textarea id="input"></textarea>
+      or use drag and drop.
+      <input type="button" value="reverse color" onclick="reverse_text_color()"></input>
     </div>
     <div id="output" class="rope-read-section" data-lining></div>
   </body>
@@ -58,7 +59,8 @@ The purpose of this page is to support the Rope Read reading style.  Browsers co
 
     #input {
         background-color: grey;
-        width:10%;
+        font-size: 0.5em;
+        /* width:10%; */
     }
 
     #menu {
@@ -72,7 +74,7 @@ The purpose of this page is to support the Rope Read reading style.  Browsers co
     /* } */
 
     #link-to-dig {
-        font-size: 0.2em;
+        font-size: 0.5em;
     }
 
   </style>
