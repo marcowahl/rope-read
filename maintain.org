@@ -1,10 +1,11 @@
 
+
 * publish the page.
 
 ** folder docs/ gets published as webpage afaiu.
 
 ** steps:
 
-*** copy necessary stuff to folder docs/.
+*** link and copy necessary stuff to folder docs/.
 
 *** enjoy.
