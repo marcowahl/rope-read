@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<!-- Copyright (C) 2018 Marco Wahl github.com/marcowahl -->
+<!-- Copyright (C) 2018-2020 Marco Wahl github.com/marcowahl -->
 
 <!-- This program is free software: you can redistribute it and/or modify -->
 <!-- it under the terms of the GNU General Public License as published by -->
@@ -26,6 +26,7 @@ The purpose of this page is to support the Rope Read reading style.  Browsers co
     <div id="text-about-drop" >
       Paste or write here:
       <textarea id="input"></textarea>
+      <input type="button" value="" onclick="clear_text()"></input>
       <input type="button" value="reverse color" onclick="reverse_text_color()"></input>
     </div>
     <div id="output" class="rope-read-section" data-lining>Or drag and drop some text here.  Literally here!</div>
@@ -105,7 +106,11 @@ The purpose of this page is to support the Rope Read reading style.  Browsers co
             .replace(new RegExp("\n\n", 'g'), " ______________ ")
         lining(output_element)
     }
-
+    
+    function clear_text() {
+         document.getElementById("input").value = "" 
+    }
+    
     function reverse_text_color() {
         var elem = document.getElementById("output")
         var color = elem.style.color
