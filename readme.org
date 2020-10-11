@@ -33,7 +33,7 @@ Rope Read runs on your browser.  You are in full control.  No data gets
 copied to some other destination.
 
 Okay, this holds as far as I can see.  Of course I can't guarantee
-anything.  (This is also stated in the license.)  Note that the
+anything.  This is also stated in the license.
 
 ** Free Software
 
