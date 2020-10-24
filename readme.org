@@ -1,27 +1,22 @@
-
-
 * Rope Read
 
 ** Motivation
 
 You don't need to move much these days in front of your machine. Just
-press some keys with your fingers and occasionally you possibly stir
-the mouse.
+press some keys with your fingers and occasionally stir the mouse.
 
 But when you read there is this humiliating effort to reposition your
 eyeballs to the other end of the line.
 
-- How stressfull is that?
-- Isn't this totally depressing?
-- This sounds so 2017!
+How stressfull is that? This is so 2017!
 
-But it's 2018 or even beyond! Rope Read comes for the rescue. Rope
+But it's not 2017 any more! Rope Read comes for the rescue. Rope
 Read saves eye movements.
 
 ** Try
 
 This is a website realizing a way to rope read.  See
-https://marcowahl.github.io/rope-read/ .
+https://marcowahl.gitlab.io/rope-read/ .
 
 - Paste or drop some text into the website.
 - See the text in rope read form.
