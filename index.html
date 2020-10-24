@@ -99,9 +99,7 @@ e        var hashParams = window.location.hash.substr(1).split('&'); //substr(1)
         for(var i = 0; i < hashParams.length; i++) {
             var p = hashParams[i].split('=');
             var output_element = document.getElementById("ouput")
-            output_element.textContent =
-                decodeURIComponent(p[1])
-                .replace(new RegExp("\n\n", 'g'), " ______________ ")
+            output_element.textContent ="lala"
             lining(output_element)
         }
         // }}}
