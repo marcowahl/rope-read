@@ -16,7 +16,7 @@ Read saves eye movements.
 ** Try
 
 This is a website realizing a way to rope read.  See
-https://marcowahl.gitlab.io/rope-read/ .
+[[https://marcowahl.gitlab.io/rope-read/]] .
 
 - Paste or drop some text into the website.
 - See the text in rope read form.
@@ -39,7 +39,7 @@ me a note! I'm curious.)
 ** Links
 
 - Emacs users can try rope-read-mode available via MELPA
-  https://melpa.org/#/rope-read-mode.
+  [[https://melpa.org/#/rope-read-mode]] .
 
 ** Contact
 
