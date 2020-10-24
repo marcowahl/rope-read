@@ -25,22 +25,22 @@
       <textarea id="input"></textarea>
       <input type="button" value="reverse color" onclick="reverse_text_color()"></input>
     </div>
-    <div id="output" class="rope-read-section" data-lining>Drag and drop text here replaces the former text.________     The purpose of this page is to support the Rope Read reading style.
+    <div id="output" class="rope-read-section" data-lining>Drag and drop text here replaces the former text. ______________ The purpose of this page is to support the Rope Read reading style.
       Browsers confirmed to transform text to rope read: <a href="http://firefox.com">firefox</a>,
-      <a href="http://conkeror.org/">conkeror</a>, chrome.________ 
-      This is <a href="https://en.wikipedia.org/wiki/Free_software">free software</a>.________ 
-      Tip: Page reload empties the text field.________ 
+      <a href="http://conkeror.org/">conkeror</a>, chrome.______________
+      This is <a href="https://en.wikipedia.org/wiki/Free_software">free software</a>.______________
+      Tip: Page reload empties the text field.______________
       Find details and all the code at
       <a href="https://github.com/marcowahl/rope-read">
         github.com/marcowahl/rope-read
-        </a>________ 
+        </a>______________
         And btw this is not a cloud thing here.  The browser does all the work.
-        No data gets stored by the maintainer/developer of this page.________ 
-        Have fun! 
+        No data gets stored by the maintainer/developer of this page.______________
+        Have fun!
   </div>
   </body>
   <style type="text/css">
-  
+
  .rope-read-section .line:nth-of-type(2n) {
         -moz-transform:rotate(180deg);
         -webkit-transform:rotate(180deg);
@@ -94,6 +94,17 @@
         }
         document.getElementById("input").value = "" // clean start.
         document.getElementById("input").oninput = slurpText
+        // if there is text given with the uri: {{{
+e        var hashParams = window.location.hash.substr(1).split('&'); //substr(1) to remove the `#`
+        for(var i = 0; i < hashParams.length; i++) {
+            var p = hashParams[i].split('=');
+            var output_element = document.getElementById("ouput")
+            output_element.textContent =
+                decodeURIComponent(p[1])
+                .replace(new RegExp("\n\n", 'g'), " ______________ ")
+            lining(output_element)
+        }
+        // }}}
     })()
 
     function dragover_handler(ev) {
@@ -110,11 +121,11 @@
             .replace(new RegExp("\n\n", 'g'), " ______________ ")
         lining(output_element)
     }
-    
+
     function clear_text() {
-         document.getElementById("input").value = "" 
+         document.getElementById("input").value = ""
     }
-    
+
     function reverse_text_color() {
         var elem = document.getElementById("output")
         var color = elem.style.color
