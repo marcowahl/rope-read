@@ -4,7 +4,7 @@
 
 ** Motivation
 
-You don't need to move much these days in front of your machine.  Just
+You don't need to move much these days in front of your machine. Just
 press some keys with your fingers and occasionally you possibly stir
 the mouse.
 
@@ -15,7 +15,7 @@ eyeballs to the other end of the line.
 - Isn't this totally depressing?
 - This sounds so 2017!
 
-But it's 2018 or even beyond!  Rope Read comes for the rescue.  Rope
+But it's 2018 or even beyond! Rope Read comes for the rescue. Rope
 Read saves eye movements.
 
 ** Try
@@ -29,17 +29,17 @@ https://marcowahl.github.io/rope-read/ .
 
 ** Security
 
-Rope Read runs on your browser.  You are in full control.  No data gets
+Rope Read runs on your browser. You are in full control. No data gets
 copied to some other destination.
 
-Okay, this holds as far as I can see.  Of course I can't guarantee
-anything.  This is also stated in the license.
+Okay, this holds as far as I can see. Of course I can't guarantee
+anything. This is also stated in the license.
 
 ** Free Software
 
-Rope Read is free software.  This includes that you can study this
-software and build something on top of it.  (If you do so please drop
-me a note!  I'm curious.)
+Rope Read is free software. This includes that you can study this
+software and build something on top of it. (If you do so please drop
+me a note! I'm curious.)
 
 ** Links
 
