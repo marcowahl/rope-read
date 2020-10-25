@@ -85,13 +85,14 @@
   </style>
   <script src="lining.min.js"></script>
   <script>
-    (function () {
-        var slurpText = () => {
+    function slurpText() {
             var output_element = document.getElementById("output")
             output_element.textContent = document.getElementById(
                 "input").value.replace(new RegExp("\n\n", 'g'), " ______________ ")
             lining(output_element)
         }
+
+    (function () {
         document.getElementById("input").value = "" // clean start.
         document.getElementById("input").oninput = slurpText
         // if there is text given with the uri: {{{
@@ -129,7 +130,8 @@
     }
 
     function clear_text() {
-         document.getElementById("input").value = ""
+        document.getElementById("input").value = ""
+        slurpText()
     }
 
     function reverse_text_color() {
