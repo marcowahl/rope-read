@@ -1,9 +1,11 @@
+
+
 * Rope Read
 
 ** Motivation
 
 You don't need to move much these days in front of your machine. Just
-press some keys with your fingers and occasionally stir the mouse.
+press some keys and occasionally stir the mouse.
 
 But when you read there is this humiliating effort to reposition your
 eyeballs to the other end of the line.
@@ -38,7 +40,7 @@ me a note! I'm curious.)
 
 ** Links
 
-- Emacs users can try rope-read-mode available via MELPA
+- Emacs users can try rope-read-mode. It's available via MELPA
   [[https://melpa.org/#/rope-read-mode]] .
 
 ** Contact
