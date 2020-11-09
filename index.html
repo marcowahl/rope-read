@@ -25,12 +25,13 @@
       <textarea id="input"></textarea>
       <input type="button" value="clear" onclick="clear_text()"></input>
       <input type="button" value="reverse color" onclick="reverse_text_color()"></input>
+      <input type="button" id="rwro-switcher" value="switch to rw" onclick="switch_to_rw()"></input>
     </div>
     <div id="output" class="rope-read-section" data-lining>Drag and drop text here replaces the former text. ______________ The purpose of this page is to support the Rope Read reading style.
       Browsers confirmed to transform text to rope read: <a href="http://firefox.com">firefox</a>,
       <a href="http://conkeror.org/">conkeror</a>, chrome.______________
       This is <a href="https://en.wikipedia.org/wiki/Free_software">free software</a>.______________
-      Find details and all the code at
+      Find the code at
       <a href="https://gitlab.com/marcowahl/rope-read">
         gitlab.com/marcowahl/rope-read
         </a>______________
@@ -149,5 +150,20 @@
             document.body.style.color = elem.style.color
         }
     }
+
+    function switch_to_rw() {
+        document.body.contentEditable = true
+        var el = document.getElementById("rwro-switcher")
+        el.value = "switch to ro"
+        el.onclick = switch_to_ro
+    }
+
+    function switch_to_ro() {
+        document.body.contentEditable = false
+        var el = document.getElementById("rwro-switcher")
+        el.value = "switch to rw"
+        el.onclick = switch_to_rw
+    }
+
   </script>
 </html>
