@@ -23,6 +23,7 @@
     <div id="text-about-drop" >
       Paste or write here:
       <textarea id="input"></textarea>
+      <input type="button" value="home" onclick="home()"></input>
       <input type="button" value="clear" onclick="clear_text()"></input>
       <input type="button" value="reverse color" onclick="reverse_text_color()"></input>
       <input type="button" id="rwro-switcher" value="switch to rw" onclick="switch_to_rw()"></input>
@@ -163,6 +164,10 @@
         var el = document.getElementById("rwro-switcher")
         el.value = "switch to rw"
         el.onclick = switch_to_rw
+    }
+
+    function home() {
+        document.location.href = "https://marcowahl.gitlab.io/rope-read"
     }
 
   </script>
